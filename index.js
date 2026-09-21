@@ -992,28 +992,34 @@ app.get("/api/auth/protected", authenticateToken, (req, res) => {
 });
 
 
-// ===============================
+// ==============================
 // START SERVER
-// ===============================
+// ==============================
 
-const server = app.listen(PORT, () => {
+if (require.main === module) {
 
-    console.log(
-        `Vhuphara Tech Support API running on port ${PORT}`
-    );
+    const server = app.listen(PORT, () => {
 
-});
+        console.log(
+            `Vhuphara Tech Support API running on port ${PORT}`
+        );
 
+    });
 
-// ===============================
-// SERVER ERROR HANDLING
-// ===============================
+    // ==============================
+    // SERVER ERROR HANDLING
+    // ==============================
 
-server.on("error", (error) => {
+    server.on("error", (error) => {
 
-    console.error("Server error:", error);
+        console.error("Server error:", error);
 
-});
+    });
+
+}
+
+// Export Express app for automated testing
+module.exports = app;
 
 
 // ===============================

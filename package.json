@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
+  "scripts": {
+    "start": "node index.js",
     "test": "jest --runInBand",
     "test:watch": "jest --watch"
-},
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
