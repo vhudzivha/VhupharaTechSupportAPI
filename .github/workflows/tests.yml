@@ -48,6 +48,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Set up test database
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql \
+            -h localhost \
+            -U postgres \
+            -d vhuphara_test \
+            -f schema.sql
+
       - name: Start API server
         run: |
           npm start &
