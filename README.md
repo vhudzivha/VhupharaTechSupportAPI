@@ -6,7 +6,7 @@ The Vhuphara & Vhudzivha Tech Support API is a RESTful backend developed to supp
 
 The system provides backend services for customers to register and log in, view IT services, create service bookings, track bookings, receive notifications, exchange messages and submit service reviews.
 
-The API communicates with a PostgreSQL database and is designed to support the Android mobile application through REST API requests and JSON responses.
+The API communicates with a PostgreSQL database and uses REST API requests and JSON responses to communicate with the Android application.
 
 ---
 
@@ -41,21 +41,29 @@ Customers can use the Android application to:
 - REST API
 - JSON
 
+### Android Application
+
+- Kotlin
+- XML
+- Retrofit
+- OkHttp
+
 ### Security
 
 - bcryptjs for password hashing
 - JSON Web Tokens (JWT) for authentication
 - dotenv for environment configuration
-- HTTPS/secure hosting can be used when deployed
 
 ### Testing
 
 - Jest
 - Supertest
+- GitHub Actions
+- PostgreSQL test database
 
-### Android Application
+### Hosting
 
-The backend is designed to communicate with the Vhuphara & Vhudzivha Tech Support Android application.
+- Render
 
 ---
 
